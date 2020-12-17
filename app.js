@@ -1,3 +1,5 @@
-var username=prompt("give me the user name");
-alert("script is working "+username);
-console.log(" hi "+username);
+var btn=document.querySelector("#btn-translate");
+
+btn.addEventListener("click",function ClickedEventHandler(){
+    console.log("Clicked!");
+})
