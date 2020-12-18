@@ -6,12 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Banana-Speak</title>
     <style>
+        .root{
+            
+            --primary: #F2C94C;
+           --black: #333333;
+           --width-break: 600px
+        }
+          body {
+           margin: 0;
+           font-family: 'Kalam', cursive;
+           color: #333333;
+        }
+        nav {
+           background-color:  #F2C94C;
+           text-align: center;
+         }
+         button {
+              background-color: #F2C94C ;
+              border: none;
+             margin: 1rem 0rem;
+              padding: 1rem 2rem;
+               font-family: 'Kalam', cursive;
+          font-size: large;
+            }
         textarea{
             width:80%;
             height: 10vh;
             margin:1rem;
             display:block;
             padding:1rem;
+            font-family: inherit;
 
         }
         #output{
@@ -23,19 +47,47 @@
             width:80%;
 
         }
+        footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color:  #F2C94C;
+    text-align:center;
+       }
+     footer p{
+         max-width: 600px;
+         margin: auto;
+     } 
+    
+     
+
     </style>
    
     
         
 </head>
 <body>
-    <h1>this is banana</h1>
+    <nav>
+        <div style="font-size: 2rem; padding:1rem;"> Banana Talk</div>
+    </nav>
+    
+
     <textarea id="txt-input" 
     placeholder="Enter Your Text Here and I Will Translate it into Banana Talk"></textarea>
     
-    <button id="btn-translate">Translate</button>
-    <div style+"font-size: larger;">output is here 👇</div>
+    <button id="btn-translate">Translate to Banana</button>
+    <div style="font-size: larger;">output will come here 👇</div>
     <div id="output"></div>
+    <footer>
+            <div style="font-size: x-large;">about</div>
+            <p>Are you a fan of minions? Did you know that the gibberish 
+                they say is an actual language.
+                 Use the translator to convert your text from English
+                  to Minion speak or Banana language.
+                  
+            </p>
+    </footer>
 
     <script src="app.js" type="text/javascript"></script>
 </body>
