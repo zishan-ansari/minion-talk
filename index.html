@@ -1,94 +1,172 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Banana-Speak</title>
+    <title>Talk with Banana</title>
     <style>
-        .root{
-            
-            --primary: #F2C94C;
-           --black: #333333;
-           --width-break: 600px
-        }
-          body {
-           margin: 0;
-           font-family: 'Kalam', cursive;
-           color: #333333;
-        }
-        nav {
-           background-color:  #F2C94C;
-           text-align: center;
-         }
-         button {
-              background-color: #F2C94C ;
-              border: none;
-             margin: 1rem 0rem;
-              padding: 1rem 2rem;
-               font-family: 'Kalam', cursive;
-          font-size: large;
-            }
-        textarea{
-            width:80%;
-            height: 10vh;
-            margin:1rem;
-            display:block;
-            padding:1rem;
-            font-family: inherit;
-
-        }
-        #output{
-            border:1px solid black;
-            height: 10vh;
-            margin:1rem;
-            display:block;
-            padding:1rem;
-            width:80%;
-
-        }
-        footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+        body{
+    background-color: #f5e050;
+    font-family: 'Cookie', cursive;
+    font-family: 'Padauk', sans-serif;
+    margin: 0px;
+}
+.navigation {
+    background-color: black;
+    color:white;
     padding: 1rem;
-    background-color:  #F2C94C;
-    text-align:center;
-       }
-     footer p{
-         max-width: 600px;
-         margin: auto;
-     } 
-    
-     
+    border-bottom-left-radius: 1.5rem;
+}
 
-    </style>
-   
+.navigation .nav-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
     
-        
+}
+
+.navigation .nav-pills {
+    text-align: right;
+}
+
+.navigation .link {
+    color:white;
+}
+
+.navigation .link-active {
+    font-weight: bold;
+}
+.list-non-bullet {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.list-item-inline {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+.link {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0.3rem 0rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.hero {
+    padding: 1rem;
+    padding-top: 2rem;
+
+}
+
+.hero .hero-img {
+    max-width: 30%;
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+#translator{
+    text-align:center;
+    height: 350px;
+}
+textarea {
+    width: 70%;
+    height: 13vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    box-shadow: 0 8px 6px -6px black;
+    padding: 5px;
+}
+#btn-translate{
+    margin: 1rem;
+    height: 40px;
+    width: 100px;
+    border: none;
+    font-weight: 700;
+    box-shadow:  3px 5px 6px #ccc;
+    background-color: black;
+    color: white;
+}
+#output {
+    border: 2px solid black;
+    height: 5vh;
+    width: 60%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    box-shadow:  3px 5px 6px #ccc;
+}
+
+.footer {
+    padding: 1rem 1rem;
+    text-align: center;
+    background-color: black;
+    border-top-right-radius: 2rem;
+    opacity: 0.8;
+}
+
+.footer .link {
+    color: white;
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: 1rem;
+    padding-top: 5px;
+    color: white;
+}
+
+.footer ul {
+    padding-inline-start: 0px;
+}
+    </style>
 </head>
 <body>
-    <nav>
-        <div style="font-size: 2rem; padding:1rem;"> Banana Talk</div>
+    <nav class="navigation">
+        <div class="nav-brand">Talk with Banana</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link" href="#translator">Talk with Minions</a>
+            </li>
+            
+        </ul>
     </nav>
-    
+    <header class="hero">
+        <img class="hero-img" src="https://pngimg.com/uploads/minions/minions_PNG25.png"/>        
+    </header>
+    <div id="translator">
+        <h3>Talk with Minions</h3>
+    <textarea id="txt-input"
+        placeholder="put your sentence in English here"></textarea>
+    <button id="btn-translate">Translate</button>
 
-    <textarea id="txt-input" 
-    placeholder="Enter Your Text Here and I Will Translate it into Banana Talk"></textarea>
-    
-    <button id="btn-translate">Translate to Banana</button>
-    <div style="font-size: larger;">output will come here 👇</div>
+    <div style="font-size: 1rem;font-weight: 800;"> Your Minion Translation 👇</div>
     <div id="output"></div>
-    <footer>
-            <div style="font-size: x-large;">about</div>
-            <p>Are you a fan of minions? Did you know that the gibberish 
-                they say is an actual language.
-                 Use the translator to convert your text from English
-                  to Minion speak or Banana language.
-                  
-            </p>
-    </footer>
+    </div>
 
+    <footer class="footer">
+        <div class="footer-header">Connect with me</div>
+        <ul class="social-links list-non-bullet">
+            
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/zishan21009532">
+                    Twitter
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/zishan-ansari">
+                    Github
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/mohd-zishan-7811ab126">
+                    Linkedin
+                </a>
+            </li>
+        </ul>
+    </footer>
     <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
